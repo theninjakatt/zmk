@@ -764,7 +764,7 @@ void generate_launcher_keymaps(void) {
 
                     } else if (memcmp(behavior_dev, "layer_tap", 9) == 0) { //&lt
 
-                        uint8_t layer = binding->param1 & 0x0f;
+                        uint8_t target_layer = binding->param1 & 0x0f;
                         uint8_t keycode = binding->param2 & 0xff;
                         gen_launcher_keymaps[layer][row][column] =
                             QK_LAYER_TAP | (target_layer << 8) | (keycode);
